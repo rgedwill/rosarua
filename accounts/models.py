@@ -13,4 +13,4 @@ class Interpreter(models.Model):
     num_successful_requests = models.IntegerField()
     
     def __str__(self):
-        return "interpreter: " + self.user
+        return f'interpreter: {self.user}'
