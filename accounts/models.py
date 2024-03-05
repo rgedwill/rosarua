@@ -10,7 +10,7 @@ class CustomUser(AbstractUser):
     
 class Interpreter(models.Model):
     user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
-    num_successful_requests = models.IntegerField()
+    total_successful_requests = models.IntegerField()
     
     def __str__(self):
         return f'interpreter: {self.user}'
