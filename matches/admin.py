@@ -1,7 +1,7 @@
 from django.contrib import admin
 from .models import InterpretationRequest, Trait
 
-class InterpretaionRequestAdmin(ImportExportMixin, admin.ModelAdmin):
+class InterpretaionRequestAdmin(admin.ModelAdmin):
     list_display = ('datetime_created', 'traits')
     
 class TraitAdmin(admin.ModelAdmin):
