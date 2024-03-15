@@ -38,9 +38,15 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'accounts',
-    'matches'
+    'matches',
+    'tailwind',
+    'theme'
 ]
+
 AUTH_USER_MODEL = "accounts.CustomUser"
+
+TAILWIND_APP_NAME = 'theme'
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -95,6 +101,13 @@ DATABASES = {
 
 }
 
+INTERNAL_IPS = [
+    "127.0.0.1",
+]
+
+# for windows users. Otherwise it will give the error mentioned here
+# https://stackoverflow.com/questions/72033027/i-am-making-a-website-using-django-and-tailwind-css-but-in-cpanel-i-am-getting
+NPM_BIN_PATH = "C:/Program Files/nodejs/npm.cmd"
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
