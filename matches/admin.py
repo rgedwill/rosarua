@@ -2,10 +2,10 @@ from django.contrib import admin
 from .models import InterpretationRequest, Trait
 
 class InterpretaionRequestAdmin(admin.ModelAdmin):
-    list_display = ('datetime_created', 'traits')
+    pass
     
 class TraitAdmin(admin.ModelAdmin):
-    list_display = ('name')
+    pass
 
 
 admin.site.register(InterpretationRequest, InterpretaionRequestAdmin)
